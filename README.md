@@ -4,7 +4,9 @@ CleanFormulation is an independent, research-based framework dedicated to analyz
 
 ## Research Documentation
 - [Research Methodology Whitepaper](methodology/CleanFormulation-Research-Methodology.md)
-
+## Data Models
+- [Ingredient Classification Schema](schemas/ingredient-classification.schema.json)
+ 
 This repository documents the methodology, structural framework, and evaluation principles that guide the CleanFormulation research system.
 
 Website: https://cleanformulation.com
