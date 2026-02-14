@@ -2,6 +2,9 @@
 
 CleanFormulation is an independent, research-based framework dedicated to analyzing soaps, detergents, and cleansing-related cosmetic products through formulation science, regulatory context, and ingredient transparency.
 
+## Research Documentation
+- [Research Methodology Whitepaper](methodology/CleanFormulation-Research-Methodology.md)
+
 This repository documents the methodology, structural framework, and evaluation principles that guide the CleanFormulation research system.
 
 Website: https://cleanformulation.com
