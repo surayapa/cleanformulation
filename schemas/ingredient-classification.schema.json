@@ -1,0 +1,192 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CleanFormulation Ingredient Classification Schema",
+  "description": "Structured schema defining classification, functional role, regulatory context, and formulation behavior attributes for cleansing-related ingredients.",
+  "type": "object",
+  "required": [
+    "ingredient_id",
+    "inci_name",
+    "classification",
+    "functional_roles"
+  ],
+  "properties": {
+
+    "ingredient_id": {
+      "type": "string",
+      "description": "Unique internal identifier for the ingredient entry."
+    },
+
+    "inci_name": {
+      "type": "string",
+      "description": "International Nomenclature Cosmetic Ingredient (INCI) name."
+    },
+
+    "common_names": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Common or alternative names associated with the ingredient."
+    },
+
+    "chemical_classification": {
+      "type": "string",
+      "description": "Broad chemical class (e.g., fatty acid salt, sulfate surfactant, amphoteric surfactant, organic acid)."
+    },
+
+    "classification": {
+      "type": "object",
+      "required": ["system_category"],
+      "properties": {
+
+        "system_category": {
+          "type": "string",
+          "enum": [
+            "soap_system",
+            "syndet_system",
+            "detergent_system",
+            "hybrid_system",
+            "multi_system"
+          ],
+          "description": "Primary system context in which the ingredient commonly appears."
+        },
+
+        "surfactant_type": {
+          "type": "string",
+          "enum": [
+            "anionic",
+            "nonionic",
+            "amphoteric",
+            "cationic",
+            "non_surfactant"
+          ]
+        }
+      }
+    },
+
+    "functional_roles": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "primary_surfactant",
+          "secondary_surfactant",
+          "co_surfactant",
+          "chelating_agent",
+          "preservative",
+          "fragrance_component",
+          "emollient",
+          "conditioning_agent",
+          "thickener",
+          "stabilizer",
+          "buffering_agent",
+          "ph_adjuster",
+          "colorant",
+          "solvent",
+          "enzyme",
+          "builder",
+          "foam_booster",
+          "foam_suppressor",
+          "antimicrobial_active",
+          "non_functional_declarative"
+        ]
+      }
+    },
+
+    "formulation_behavior": {
+      "type": "object",
+      "properties": {
+
+        "hard_water_interaction": {
+          "type": "string",
+          "enum": [
+            "high_interaction",
+            "moderate_interaction",
+            "low_interaction",
+            "not_applicable"
+          ]
+        },
+
+        "rinsing_behavior": {
+          "type": "string",
+          "enum": [
+            "fast_rinse",
+            "moderate_rinse",
+            "slow_rinse",
+            "depends_on_system"
+          ]
+        },
+
+        "foam_profile": {
+          "type": "string",
+          "enum": [
+            "dense_creamy",
+            "large_bubbly",
+            "low_foam",
+            "foam_modifying",
+            "not_applicable"
+          ]
+        }
+      }
+    },
+
+    "regulatory_context": {
+      "type": "object",
+      "properties": {
+
+        "cosmetic_classification_possible": {
+          "type": "boolean"
+        },
+
+        "drug_classification_possible": {
+          "type": "boolean"
+        },
+
+        "restricted_in_some_jurisdictions": {
+          "type": "boolean"
+        },
+
+        "notes": {
+          "type": "string"
+        }
+      }
+    },
+
+    "claim_associations": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "antibacterial",
+          "gentle",
+          "sulfate_free",
+          "paraben_free",
+          "natural",
+          "moisturizing",
+          "deep_cleaning",
+          "odor_control",
+          "fragrance_free"
+        ]
+      }
+    },
+
+    "interpretation_limits": {
+      "type": "string",
+      "description": "Explicit statement describing limitations of interpretation due to concentration, formulation context, or data availability."
+    },
+
+    "evidence_sources": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "References or source identifiers used in analysis."
+    },
+
+    "version": {
+      "type": "string",
+      "description": "Schema version reference."
+    }
+
+  }
+}
