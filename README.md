@@ -193,7 +193,18 @@ Creative Commons Attribution 4.0 International (CC BY 4.0)
 You may share and adapt the material with appropriate attribution.
 
 ---
+## About the Researcher
 
+CleanFormulation is an independent ingredient research project.
+
+Lead researcher:  
+**Rifat Jalal**  
+Founder & Independent Ingredient Researcher  
+
+Research profile:  
+https://cleanformulation.com/research/about-the-researcher
+
+----
 ## Contact
 
 For academic, research, or media inquiries:
